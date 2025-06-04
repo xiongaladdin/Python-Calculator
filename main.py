@@ -1,6 +1,11 @@
 # Python Calulator
 
-operator = input("Enter an operator (+ - * /): ")
+while True:
+    operator = input("Enter an operator (+ - * /): ")
+    if operator in ["+", "-", "*", "/"]:
+        break
+    else:
+        print("Please enter in a valid operator.")
 
 while True:
     try:
@@ -14,7 +19,7 @@ while True:
         num2 = int(input("Enter the 2nd number: "))
         break
     except ValueError:
-        print("Please enter in a number: ")
+        print("Please enter in a number.")
 
 # print(num1 + num2)
 
@@ -29,5 +34,3 @@ elif operator == "/":
         print("Cannot divide by zero.")
     else:
         print(num1 / num2)
-else:
-    print("Invalid operator.")
